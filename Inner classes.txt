@@ -1,0 +1,39 @@
+INNER CLASSES
+1. Sometimes we can declare a class inside another class that is nothing but inner classes.
+2. introduced in java 1.1 v to fix some bugs in event handling but was slowly used by the programmers in day to day coding also.
+3. without existing one type of object if theres no chance of another type of object then we should go for inner classes.
+eg. map and entry, university and dept. etc.
+4. the relarionship between two classes is HAS-A relationship i.e. aggregation and composition.
+5. based on position and behaviour they are divided in 4 types
+- normal/regular
+- method local
+- anonymous
+-static nested classes
+6. if we are declaring a class directly inside another class which is non-static and has a name then such classes are known as normal or regular inner classes.
+we cant touch inner class code direclty withiout crearting the object of Outer class. Inside inner class we cant declare main() and cannot run inner class directly 
+from the cmd.
+from normal inner class, we can access both instance and static variables directly.
+inside inner class we can use this keyword to refer to the current class object(this. x in inner class means its object).
+ applicable modifiers for outer class are: public, <default>, final, abstract, strictfp
+                           inner classes are:                                              + private, protected, static.
+ nesting of inner class is possible but inorder to call the methods of the innermost class we must invoke objects for its parent classes.
+7. method local inner class:
+sometimes we can declare a class insidea method such classes are called as method local inner classes.
+in java, nesting of methods is not possible, to achieve this we can use this concept.
+purpose is to define method specific repeated functionality.
+we can access the inner class only inside the methos where we declare it.
+we can declare it inside both local and static methods.
+if we declare it as static then non-static variables will not be accessed inside the method.
+inorder to call the variable declared inside the method (inside which we declare the inner class) we must declare it as final, bc. final variables are replaced with the value at compile time only.
+the applicable modifiers for method local inner classes are abstract, strictfp and final.
+8. anonymous inner classes
+a class declared inside a class without name is said to be an anonymous inner class.
+main purpose is for instance use.
+1. an anonymous class tha extends another class
+2. an anonymous class that implements a interface
+3. an anonymous class defined inside arguments
+PopCorn p=new PopCorn(); creating an object of PopCorn class.
+PopCorn p1=new PopCorn()
+{};declaring an unamed class that is extending PopCorn and for the class creating an object using parent reference.
+overriding and this concept are the opposite of each other. In overriding, whatever changes are there are permanent for further extending classes but here the changes are only one time.
+check the examples for Aclass, Bclass and Cclass.java respectively.

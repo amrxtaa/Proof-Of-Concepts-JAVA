@@ -1,0 +1,40 @@
+package com.company;
+
+public class reverse_a_number {
+    public static void main(String[] args) {
+        int n = 1234;
+        rev1(n);
+       // System.out.println(sum);
+        System.out.println(helper(1234));
+    }
+    static int sum=0;
+    static void rev1(int n)
+    {
+        if(n==0)
+            return ;
+
+        int rem=n%10;
+        sum=sum*10+rem;
+         rev1(n/10);
+    }
+    static int helper(int n)
+    {
+        int digits=(int)(Math.log(n))+1;
+         return rev2(n,digits);
+    }
+    static int rev2(int n, int digits)
+    {
+        if(n%10==n)
+            return n;
+        int rem=n%10;
+        return rem * (int)(Math.pow(10,digits-1))+rev2(n/10,digits-1);
+    }
+//    static int palin(int n. int s, int e)
+//    {
+//        if(n%10==0)
+//            return;
+//        if(n[s]==n[e])
+//            return true;
+//
+//    }
+}
